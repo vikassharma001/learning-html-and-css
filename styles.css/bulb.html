@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <link rel="https://fonts.google.X-UA-Compatible"href="styles.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;padding: 0;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            h1{
+                text-align: center;
+                margin: top 40px;
+                text-transform:uppercase;
+
+            }
+            .light off{
+                width:100%;
+                height:80vh;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+            }
+            fig caption{
+                text-align: center;
+            }
+            .on off btn{
+                width:100%;
+                margin-top: -50px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .switch{
+                position:relative;
+                display:inline-block;
+                width: 60px;
+                height: 34px;
+
+            }
+            .switch input{
+                opacity: 0;
+                width:0;
+                height:0;
+
+            }
+            .slider{
+                position:absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: brown;
+                -webkit-transition:.4s;
+                transition: .4s;
+            }
+            .slider:before{
+                position:absolute;
+                content:" ";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition:.4s;
+                transition:.4s;
+            }
+            input:checked+.slider{
+                background-color: #2196F3;
+            }
+            input:Focus+.slider{
+                box-shadow: 0 0 1px #2196F3;
+            }
+            input:checked+.slider:before{
+                -webkit-transform translate: x(26px);
+                -ms-transform:translate x(26px);
+                transform:translate x(26px);
+
+            }
+
+        }
+    </style>
+    <h1 id="bulb data">light on off</h1>
+    <br>
+    <main class="light off">
+        <figure class="light style">
+            <img src="light off"id="light id1">
+            <figcaption>
+                <p>light on off</p>
+            </figcaption>
+        </figure>
+        <figure class="light style">
+            <img src="light off"id="light id2">
+            <figcaption>
+                <p>light on off</p>
+            </figcaption>
+        </figure>
+        <figure class="light style">
+            <img src="light off"id="light id3">
+            <figcaption>
+                <p>light on off</p>
+            </figcaption>
+        </figure>
+        <figure class="light style">
+            <img src="light off"id="light id4">
+            <figcaption>
+                <p>light on off</p>
+            </figcaption>
+        </figure>
+       <div class="on off btn"
+       <label class="switch">
+           <input type="checkbox"><span class="slider"on click="tubelight"></span>
+       </label> 
+    </div>
+    </main>
+    <script>
+        const.tubelight=()=>{
+            let btext=document.get element by id('bulb data');
+            for(x=1;x<6;x++){
+                let bid=document.get element by id('light id'concat(x));
+                if(bid.src.match('light on')){
+                    bid.src="light off";
+                    btext.style.color="black";
+                                    }
+            }
+            else{
+                bid.src="light on";
+                btext.inner HTML="light on";
+                btext.style.color="red";
+            }
+        }
+    </script>
+</body>
+</html>
